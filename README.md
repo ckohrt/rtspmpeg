@@ -1,4 +1,4 @@
-# Create container
+# Introduction
 
 I forked this container to use it in my home autpomation system running node-red with HomematicIP. I am new to docker and also to lighttpd and ffmpeg, but I wanted to have a container ready to use with my system without any volumes etc. to simplify MY life. But I will of course in future update this repo to have also the opportunity to input volumes, camera url info etc. into the container so that a rebuild of the image is not required anymore.
 I was a bit unhappy when I first tried the really good code from the repos I forked from, because the container didn't work out of the box. The reasons where:
@@ -8,16 +8,19 @@ I was a bit unhappy when I first tried the really good code from the repos I for
 * the container was based on ubuntu:latest so I changed it to alpine
 * I added specific versions in the docker file to be sure that it builds also in the future. For me it was not so interesting if the software was the newest one, I prefer running software out of the box. Then, somebody can change this...
 
-To create a container image called rtspmpeg:
+# Create container
+
+To create a container image called ckrtspmpeg:
 
 ```
-docker build -t rtspmpeg .
+docker build -t ckrtspmpeg .
 ```
 
 # Set up
 
-At the moment You have to download this git project, modify the files samplestream and sampleframe and build a fresh image. I will improve this.
-For excample, I had to add 
+At the moment You have to download this git project, modify the files samplestream and sampleframe and build a fresh image. I will improve this, e.g. with git CI/CD to create a container on docker.io.
+
+For excample, I had to add to the files samplestream and sampleframe
 ```
 -rtsp_transport tcp
 ```
