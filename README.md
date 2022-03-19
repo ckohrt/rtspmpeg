@@ -73,6 +73,8 @@ I added stdin_open and tty to start on the bash in interactive mode just for tes
 
 You can view the pages via http://server:port/cgi-bin/samplestream and http://server:port/cgi-bin/sampleframe
 
+Example: http://localhost:8080/cgi-bin/samplestream
+
 # Acknowledgements
 
 Based on https://stevethemoose.blogspot.com/2021/07/converting-rtsp-to-mjpeg-stream-on.html
