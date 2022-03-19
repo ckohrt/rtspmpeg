@@ -8,6 +8,20 @@ I was a bit unhappy when I first tried the really good code from the repos I for
 * the container was based on ubuntu:latest so I changed it to alpine
 * I added specific versions in the docker file to be sure that it builds also in the future. For me it was not so interesting if the software was the newest one, I prefer running software out of the box. Then, somebody can change this...
 
+My camera info:
+* Manufacturer: HikVision
+* Type: HWI-B120H-M
+* Firmware Version: V5.5.94 build 190902
+
+Settings of the camera:
+* Set substream to MJPEG (unfortunately over RTSP - I didn't find the url for the http MJPEG stream --> Therefore I need this conversion container.)
+
+The working URL for my camera model is: 
+```
+rtsp://user:password@192.168.1.173:554/Streaming/Channels/102
+```
+where 102 means stream 1 substream 2.
+
 # Create container
 
 To create a container image called ckrtspmpeg:
