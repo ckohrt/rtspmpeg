@@ -40,6 +40,8 @@ For excample, I had to add to the files samplestream and sampleframe
 ```
 to get infos from my cameras.
 
+BTW because my cameras deliver an MJPEG RTSP stream I can copy the codec and use the flag -f MPJPEG to change to HTTP MJPEG delivered by lighttpd cgi script. (I am still a bit unsure but it works for now.)
+
 # Run container with docker
 
 ```
@@ -80,3 +82,10 @@ Example: http://localhost:8080/cgi-bin/samplestream
 Based on https://stevethemoose.blogspot.com/2021/07/converting-rtsp-to-mjpeg-stream-on.html
 
 Big thanks to https://github.com/piersfinlayson for his initial implementation https://github.com/piersfinlayson/rtspmpeg for this based on the article.
+
+# TODO
+
+* create volumes again
+* CPU load is still too high, so I try to reduce it, but seems this will be not possible. Then I would like to stream only if there is someone connected That solution would be fine for me.
+
+Any suggestions and ideas would be great...!
