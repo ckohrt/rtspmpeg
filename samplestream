@@ -3,4 +3,4 @@
 echo "Content-Type: multipart/x-mixed-replace;boundary=ffmpeg"
 echo "Cache-Control: no-cache"
 echo ""
-ffmpeg -i "rtsp://username:password@ip_address:554" -c:v mjpeg -q:v 1 -f mpjpeg -an -
+ffmpeg -rtsp_transport tcp -i "rtsp://user:password@192.168.1.173:554/Streaming/Channels/102" -c:v copy -q:v 31 -f mpjpeg -an -

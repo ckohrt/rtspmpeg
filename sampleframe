@@ -3,4 +3,4 @@
 echo "Content-Type: image/jpeg"
 echo "Cache-Control: no-cache"
 echo ""
-ffmpeg -i "rtsp://username:password@ip_address:554" -vframes 1 -f image2pipe -an -
+ffmpeg -rtsp_transport tcp -i "rtsp://user:password@192.168.1.173:554/Streaming/Channels/102" -vframes 1 -f image2pipe -an -

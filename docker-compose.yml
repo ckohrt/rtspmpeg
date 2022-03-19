@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  ckrtspmpeg-server:
+    image: ckrtspmpeg:latest
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+    environment:
+      - TZ=Europe/Berlin
+    ports:
+      - "8080:80"
+    #volumes:
+    #  - ./cgibin:/var/www/localhost/cgi-bin
+    #  - ./lighttpd:/etc/lighttpd
+    #  - ./htdocs:/var/www/localhost/htdocs
